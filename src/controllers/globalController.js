@@ -34,7 +34,7 @@ export const socialController = async (req, res) => {
     const apiData = await axios.get("https://4leaf-crawling.pe.kr/searchGoogle");
     console.log(apiData.data);
 
-    const newData = apiData.data.filter((data) => data.type !== "사회")
+    const newData = apiData.data.filter((data) => data.type == "사회")
 
 
     res.render("screens/social", { dataList: newData });
