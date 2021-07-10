@@ -1,0 +1,7 @@
+extends ../layouts/main.pug
+
+block content
+    each data in dataList   
+        h4  
+            p #{data.type}
+            a(href=data.link) #{data.title}
